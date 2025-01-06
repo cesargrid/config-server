@@ -1,0 +1,17 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/cesargrid/config-server.git
+          default-label: main
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
